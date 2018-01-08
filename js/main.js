@@ -47,7 +47,12 @@ $('form.add-follower').submit(function(e){
     data.push(inputs);
 
      //add a row on each input
-    $('table.newTable').append('<tr><td>'+inputs[0]+'</td><td>'+inputs[1]+'</td><td>'+inputs[2]+'</td><td>'+inputs[3]+'</td><td>'+inputs[4]+'</td><td>'+inputs[5]+'</td></tr>');
+    $('table.newTable').append('<tr><td>'+inputs[0]+'</td><td>'+inputs[1]+'</td><td>'+inputs[2]+'</td><td>'+inputs[3]+'</td><td>'+inputs[4]+'</td><td>'+inputs[5]+'</td><td><button>remove</button><td></tr>');
+    //delete row
+    $('table.newTable button').click(function(e){
+       e.preventDefault();
+       $(this).closest('tr').remove();
+    });
     //update statistics on each input
     var countFollower = $('table.newTable tr').length-1
     $('span.fol-no').html(countFollower);
