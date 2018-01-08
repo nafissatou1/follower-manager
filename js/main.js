@@ -7,6 +7,7 @@ $('div#dashboard-page').show();
 $('div#followers-page').show();
 });
 
+$('div.followers-list').hide();
 
 //show add follower form
 $('button.add').click(function(e){
@@ -45,6 +46,8 @@ $('form.add-follower').submit(function(e){
             inputs.push($(this).val());
         });
     data.push(inputs);
+
+    $('div.followers-list').show();
 
      //add a row on each input
     $('table.newTable').append('<tr><td>'+inputs[0]+'</td><td>'+inputs[1]+'</td><td>'+inputs[2]+'</td><td>'+inputs[3]+'</td><td>'+inputs[4]+'</td><td>'+inputs[5]+'</td><td><button>remove</button><td></tr>');
