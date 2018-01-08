@@ -10,7 +10,40 @@ body{
   overflow-x: hidden;
   background: #f7f2ee;
 }
+div#dashboard-page{
+display: none;
+}
+div#followers-page{
+display: none;
+}
+/* login*/
+section#welcome{
+  background-color: #94618e;
+  height: 10vw;
+  color: #f7f2ee;
+  text-align: center;
+  margin-bottom: 10%;
+  font-size: 30px;
+}
+section#welcome p{
+  font-size: 3.5vw;
+  padding-top: 3%;
+  font-weight: bold;
+}
+section#login{
+  margin-bottom: 10%;
+  margin-left: 30vw;
+}
+section#login p{
+  margin-bottom: 5%;
+  font-size: 3vw;
+  font-weight: bold;
+}
+section#login input{
+  width: 50%;
+}
 
+/*navigation menu*/
 .navbar {
   background-color: #94618e;
 }
@@ -54,73 +87,89 @@ span.navbar-toggler-icon{
 ul.navbar-nav{
   margin-left: 5%;
 }
+li.logout{
+  margin-left: 30vw;
+}
 
 /*header*/
-
 header{
   background: #3b3a36;
   color: #b4b7b8;
   font-weight: bold;
-  height: 100px;
+  height: 7%;
   margin-top: 0;
   margin-bottom: 0;
 }
 header p{
-  padding-top: 1%;
+  padding-top: 7%;
 }
 header span.big{
-  font-size: 40px;
+  font-size: 4rem;
   margin-left: 5%;
 }
 header span.small{
-  font-size: 25px;
+  font-size: 3rem;
 }
 
-/* main*/
+/*followers main content*/
+section#followers{
+  margin-bottom: 10%;
+}
+section#add-follower{
+  display: none;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+button.add-someone{
+  margin-top: 2%;
+}
+input.form-control{
+  width: 350px;
+}
+button.add{
+ margin-left: 10%;
+}
+input#myInput{
+  margin-bottom: 5%;
+}
+div.followers-list{
+  margin-top: 10%;
+}
+div.followers-list input{
+  margin-right: 2%;
+}
+div.followers-list h4{
+  margin-bottom: 3%;
+}
+
+table.newTable{
+  border:solid 2px;
+  border-radius: 5px;
+}
+
+
+/* dashboard main content*/
 div.card-header{
   background-color: #94618e;
   color: #f7f2ee;
   font-size: 20px;
 }
 div.card{
-  margin-top: 5%;
+ margin-bottom: 10%;
   text-align: center;
 }
 div.card-title{
   font-weight: bold;
 }
 p.card-title{
-  font-size: 40px;
+  font-size: 3vw;
 }
 p.card-text{
-  font-size: 25px;
-}
-table{
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-section#main{
-  margin-bottom: 100px;
-}
-input.form-control{
-  width: 350px;
-}
-
-/*followers*/
-div.followers-list{
-  margin-bottom: 100px;
-}
-section#main{
-  display: none;
-}
-button.add-follower{
-  margin-top: -5%;
-  margin-right: 10%;
+  font-size: 2.5vw;
 }
 
 
 /*footer*/
-
 footer {
  background: #3b3a36;
   color: #b4b7b8;
