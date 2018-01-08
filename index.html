@@ -14,143 +14,195 @@
   crossorigin="anonymous"></script>
      <script src="js/main.js"></script>
   </head>
+
+
   <body>
 
-    <nav class="navbar navbar-expand-lg navbar-expand-md">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    <span class="navbar-toggler-icon"></span>
-    <span class="navbar-toggler-icon"></span>
-
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav justify-content-center">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Dashboard</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="followers.html">Followers</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Manage</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Statistics</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<header>
-  <p><span class="big"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Dashboard</span><span class="small"><i> Manage your followers</i></span></p>
-</header>
-
-<section id="main">
-  <div class="container">
-    <div class="card">
-      <div class="card-header">Overview</div>
-        <div class="card-body">
-
+<!--LOGIN PAGE-->
+    <div id="login-page">
+      <!--welcome bar-->
+      <section id="welcome">
+        <div class="container">
+          <p>Welcome to followers manager</p>
+        </div>
+      </section>
+      <!--login section-->
+      <section id="login">
+        <div class="container">
           <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-3">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title"><i class="fa fa-user" aria-hidden="true"></i> 10bn</p>
-                  <p class="card-text">Followers</p>
-                </div>
+            <p>Enter your login details</p>
+            <form class="login col-sm-12 col-12">
+              <div class="form-group">
+                <label for="Email1">Email address</label>
+                <input type="email1" class="form-control" id="exampleDropdownFormEmail2" placeholder="    email@example.com">
               </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-3">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title"><i class="fa fa-globe" aria-hidden="true"></i> 95 </p>
-                  <p class="card-text">Countries</p>
-                </div>
+              <div class="form-group">
+                <label for="Password">Password</label>
+                <input type="password" class="form-control" id="exampleDropdownFormPassword2"     placeholder  ="Password">
               </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-3">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title"><i class="fa fa-male" aria-hidden="true"></i> 45%</p>
-                  <p class="card-text">Male</p>
-                </div>
+              <button type="submit" class="btn btn-secondary login">Sign in</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+<!--FOLLOWERS-->
+    <div id="followers-page">
+  <!--Navigation menu-->
+      <nav class="navbar fixed-top navbar-expand-lg navbar-expand-md">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"   aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#dashboard-page">Dashboard</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#followers-page">Followers</a>
+            </li>
+            <li class="nav-item logout">
+              <a class="nav-link" href="login.html">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  
+      <!--header-->
+      <header>
+        <p><span class="big"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Dashboard</span><span class="small"><i> Manage your followers</i></span></p>
+        <button class="btn btn-secondary add text-center">Add Follower</button>
+      </header>
+  
+      <!--Hidden add followers form-->
+      <section id="add-follower">
+        <div class="container">
+          <div class="add-follower">
+            <form class="add-follower">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control myElement" id="name" placeholder="Enter Name">
               </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-3">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title"><i class="fa fa-female" aria-hidden="true"></i> 65%</p>
-                  <p class="card-text">
-                  female</p>
-                </div>
+              <div class="form-group">
+                <label for="surname">Surname</label>
+                <input type="text" class="form-control myElement" id="surname" placeholder="Enter Surname">
+              </div>
+              <div class="form-group">
+                <label for="surname">Gender (first letter should be in capital letter)</label>
+                <input type="text" class="form-control myElement" id="gender" placeholder="Male / female">
+              </div>
+              <div class="form-group">
+                <label for="country">Country</label>
+                <input type="text" class="form-control myElement" id="country" placeholder="Enter country">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control myElement" id="email" placeholder="Enter Email">
+              </div>
+              <div class="form-group">
+                <label for="phone">telephone</label>
+                <input type="tel" class="form-control myElement" id="phone" placeholder="Enter Phone">
+                <button type="submit" class="btn add-someone btn-dark">Add</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+  
+       <!--List of followers-->
+      <section id="followers">
+        <div class="container">
+          <div class="row">
+            <div class="followers-list col-lg-12 col-md-12 col-sn-12 col-12">
+              <input type="text" id="myInput" placeholder="Search for names.." title="Type in a name">
+              <h4> Click on the checkbox to hide column</h4>
+              Name
+              <input id="btnHide1" type="checkbox" />
+              Surname
+              <input id="btnHide2" type="checkbox" />
+              Gender
+              <input id="btnHide3" type="checkbox" />
+              Country
+              <input id="btnHide4" type="checkbox" />
+              Email
+              <input id="btnHide5" type="checkbox" />
+              Phone
+              <input id="btnHide6" type="checkbox" />
+              <div class="followers-table">
+      
               </div>
             </div>
           </div>
         </div>
-        <hr>
-        <div class="container">
-          <table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Name</th>
-      <th scope="col">Surname</th>
-      <th scope="col">Joined on</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>2018-01-02</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>2017-12-27</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>Bird</td>
-      <td>2017-12-18</td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>John</td>
-      <td>Wick</td>
-      <td>2017-12-10</td>
-    </tr>
-    <tr>
-      <th scope="row">5</th>
-      <td>Larry</td>
-      <td>mock</td>
-      <td>2017-12-04</td>
-    </tr>
-  </tbody>
-</table>
-
-</div>
-      </div>
+      </section>
     </div>
-  </div>
 
-</section>
+  <!--DASHBOARD-->
+    <div id="dashboard-page">
+  <!--statistics-->
+      <section id="main">
+        <div class="container">
+          <div class="card">
+            <div class="card-header">Overview</div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="card">
+                      <div class="card-body">
+                        <p class="card-title"><i class="fa fa-user" aria-hidden="true"></i> <span class="fol-no"></span></p>
+                        <p class="card-text">Followers</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="card">
+                      <div class="card-body">
+                        <p class="card-title"><i class="fa fa-globe" aria-hidden="true"></i>  <span class="countries-no"></p>
+                        <p class="card-text">Countries</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="card">
+                      <div class="card-body">
+                        <p class="card-title"><i class="fa fa-male" aria-hidden="true"></i> %<span class="male-no"></p>
+                        <p class="card-text">Male</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="card">
+                      <div class="card-body">
+                        <p class="card-title"><i class="fa fa-female" aria-hidden="true"></i> %<span class="female-no"></p  >
+                        <p class="card-text">
+                        female</p>
+                      </div>
+                    </div>
+                  </div>
+      
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+    </div>
 
 
-<footer>
-  <p>&copy; Naf Design 2017</p>
-</footer>
+
+
+   <!--footer-->
+    <footer>
+      <p>&copy; Naf Design 2017</p>
+    </footer>
 
 
     
-
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="  sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"   integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"   crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity  ="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="  anonymous"></script>
     
-  <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-  
   </body>
 </html>
