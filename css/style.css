@@ -146,6 +146,9 @@ table.newTable{
   border:solid 2px;
   border-radius: 5px;
 }
+table.newTable button{
+  font-color: white;
+}
 
 
 /* dashboard main content*/
